@@ -34,7 +34,7 @@ typedef enum {
 // Структура карты
 typedef struct Card {
     Rectangle bounds;      // Позиция и размер на экране
-    Texture2D texture;     // Текстура (если отдельная для каждой карты)
+    Texture2D texture;     // Текстура (отдельная для каждой карты)
     Color tint;            // Цветовой оттенок
     float scale;           // Масштаб
     bool isSelected;       // Выбрана ли карта
@@ -46,7 +46,7 @@ typedef struct Card {
     Vector2 velocity;      // Скорость (для анимаций)
 } Card;
 
-// Структура контроллера карт (например, для руки игрока)
+// Структура контроллера карт (для руки игрока)
 typedef struct CardController {
     Rectangle bounds;      // Область, где находятся карты
     struct Card** cards;   // Указатель на массив указателей на карты
@@ -55,7 +55,7 @@ typedef struct CardController {
 
 // Структура колоды
 typedef struct Deck {
-    struct Card cards[DECK_SIZE];  // Массив карт
+    struct Card cards[DECK_SIZE];   // Массив карт
     int cardCount;                  // Сколько карт сейчас в колоде
     Texture2D atlas;                // Общая текстура (атлас)
 } Deck;

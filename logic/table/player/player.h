@@ -6,9 +6,14 @@
 
 typedef struct
 {
-    Card hand[2];
-    int chips;
+    Card hand[2]; // Рука игрока
+    int chips; // Баланс игрока
 } Player;
 
+void PlayerInit(Player* plr, int chips){
+    // Инициализатор игрока
+    // 
+    plr->chips = chips;
+}
 
 #endif

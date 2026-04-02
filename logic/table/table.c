@@ -1,6 +1,7 @@
 #include "table.h"
 
 Table TableInit(Player players, int playersCount, int community, int minRaise, Texture2D atlas){
+    // Инициализатор стола
     Table table = {
         .players = players,
         .playersCount = playersCount,
@@ -50,7 +51,7 @@ void DealCards(Table* table){
     }
 
     for (int i = 0; i < 5; i++){
-        Card topCard = table->deck.cards[--table->deck.carCount];
+        Card topCard = table->deck.cards[--table->deck.cardCount];
         table->street[i] = topCard;
         table->street[i].isFaceUp = true;
     }
